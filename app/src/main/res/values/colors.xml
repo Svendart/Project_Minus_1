@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name = "hitam" >#FF000000</color>
+    <color name = "putih" >#FFFFFFFF</color>
+    <color name = "biru" >#086AB1</color>
+    <color name = "biruMuda" >#0DAEFD</color>
+    <color name = "hijau" >#0A9907</color>
+    <color name = "hijauMuda" >#5FD70B</color>
+
+    <color name = "biruTua" >#044771</color>
+    <color name = "biruTuaBanget" >#023254</color>
+    <color name = "hijauTua" >#2F6F04</color>
+    <color name = "hijauTuaBanget" >#204902</color>
+</resources>

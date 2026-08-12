@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Project_Minus_1" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+
+        <!-- Warna Utama dark -->
+        <item name = "colorPrimary" >@color/biruTua </item>
+        <item name = "colorPrimaryVariant" > @color/biruTuaBanget </item>
+        <item name = "colorOnPrimary" >@color/hitam </item>"
+
+        <!-- Warna kedua dark -->
+        <item name = "colorSecondary" >@color/hijauTua </item>
+        <item name = "colorSecondaryVariant" >@color/hijauTuaBanget </item>
+        <item name = "colorOnSecondary" >@color/hitam </item>
+
+        <!-- Status Bar Color -->
+        <item name = "android:statusBarColor" >?attr/colorPrimaryVariant</item>
+
+
+
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+</resources>

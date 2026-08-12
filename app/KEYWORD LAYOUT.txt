@@ -1,0 +1,200 @@
+===================================================================
+                  ANDROID STUDIO CHAT SHEET: LINEARLAYOUT
+===================================================================
+
+[1] PENENTU ARAH (WAJIB ADA)
+Atribut: android:orientation
+Pilihan:
+- "vertical"   : Menyusun komponen dari atas ke bawah.
+- "horizontal" : Menyusun komponen dari kiri ke kanan.
+
+-------------------------------------------------------------------
+
+[2] MENGATUR POSISI (GRAVITY)
+Atribut: android:layout_gravity
+Kegunaan: Mengatur posisi komponen itu sendiri di dalam layout.
+Pilihan:
+- "center_horizontal" : Geser ke tengah (kiri-kanan).
+- "center_vertical"   : Geser ke tengah (atas-bawah).
+- "center"            : Tepat di tengah-tengah layar.
+- "end"               : Geser ke ujung kanan.
+
+Atribut: android:gravity
+Kegunaan: Mengatur isi/konten di dalam komponen tersebut.
+Contoh: Di TextView -> membuat teks rata tengah ("center") atau kanan ("end").
+
+-------------------------------------------------------------------
+
+[3] PEMBAGI RUANG (WEIGHT)
+Atribut: android:layout_weight
+Kegunaan: Membagi sisa ruang layar secara persentase (adil).
+Contoh  : Jika ada 2 tombol bersandingan, beri android:layout_weight="1"
+          pada kedua tombol agar lebarnya otomatis terbagi rata 50:50.
+Tips    : Jika memakai weight pada lebar, set android:layout_width="0dp".
+
+-------------------------------------------------------------------
+
+[4] JARAK DAN SPASI (MARGIN & PADDING)
+Atribut: android:layout_margin
+Kegunaan: Jarak luar (agar komponen tidak menempel dengan komponen lain).
+Pilihan khusus:
+- android:layout_marginTop    : Jarak luar sisi atas.
+- android:layout_marginBottom : Jarak luar sisi bawah.
+- android:layout_marginStart  : Jarak luar sisi kiri.
+- android:layout_layoutEnd    : Jarak luar sisi kanan.
+
+Atribut: android:padding
+Kegunaan: Jarak dalam (membuat ruang di antara teks dengan dinding tombol).
+
+-------------------------------------------------------------------
+
+[5] UKURAN STANDAR (WIDTH & HEIGHT)
+Atribut: android:layout_width dan android:layout_height
+Pilihan:
+- "match_parent" : Mengikuti ukuran layar / layout induknya (penuh).
+- "wrap_content" : Mengikuti ukuran isi teks atau tombol itu sendiri.
+
+===================================================================
+
+
+
+
+
+
+
+===================================================================
+                ANDROID STUDIO CHEAT SHEET: CONSTRAINTLAYOUT
+===================================================================
+ KONSEP UTAMA
+Komponen HARUS diikat minimal pada 1 sumbu Horisontal (Kiri/Kanan)
+dan 1 sumbu Vertikal (Atas/Bawah) agar tidak melayang ke pojok kiri atas.
+
+-------------------------------------------------------------------
+ IKATAN HORISONTAL (KIRI / KANAN)
+1. Menempel ke dinding kiri layar (Parent):
+   app:layout_constraintStart_toStartOf="parent"
+
+2. Menempel ke dinding kanan layar (Parent):
+   app:layout_constraintEnd_toEndOf="parent"
+
+3. Meletakkan komponen di sebelah KANAN komponen lain:
+   app:layout_constraintStart_toEndOf="@id/id_komponen_lain"
+
+4. Meletakkan komponen di sebelah KIRI komponen lain:
+   app:layout_constraintEnd_toStartOf="@id/id_komponen_lain"
+
+-------------------------------------------------------------------
+ IKATAN VERTIKAL (ATAS / BAWAH)
+1. Menempel ke dinding atas layar (Parent):
+   app:layout_constraintTop_toTopOf="parent"
+
+2. Menempel ke dinding bawah layar (Parent):
+   app:layout_constraintBottom_toBottomOf="parent"
+
+3. Meletakkan komponen tepat di BAWAH komponen lain (Sering dipakai):
+   app:layout_constraintTop_toBottomOf="@id/id_komponen_lain"
+
+4. Meletakkan komponen tepat di ATAS komponen lain:
+   app:layout_constraintBottom_toTopOf="@id/id_komponen_lain"
+
+-------------------------------------------------------------------
+ TRIK MEMBUAT RATATENGAH (CENTER)
+1. Rata Tengah Horisontal (Kiri-Kanan):
+   Gabungkan kedua atribut ini pada satu komponen:
+   app:layout_constraintStart_toStartOf="parent"
+   app:layout_constraintEnd_toEndOf="parent"
+
+2. Rata Tengah Vertikal (Atas-Bawah):
+   Gabungkan kedua atribut ini pada satu komponen:
+   app:layout_constraintTop_toTopOf="parent"
+   app:layout_constraintBottom_toBottomOf="parent"
+
+3. Tepat di Tengah-Tengah Layar:
+   Tulis keempat atribut di atas sekaligus pada komponen tersebut.
+
+-------------------------------------------------------------------
+ MENGATUR POSISI GESER (BIAS)
+*Hanya berfungsi jika komponen sudah diatur Rata Tengah (Center)*
+1. Geser Horisontal (Kiri <-> Kanan):
+   app:layout_constraintHorizontal_bias="0.3"
+   (Nilai 0.0 = mentok kiri, 0.5 = tengah, 1.0 = mentok kanan)
+
+2. Geser Vertikal (Atas <-> Bawah):
+   app:layout_constraintVertical_bias="0.3"
+   (Nilai 0.0 = mentok atas, 0.5 = tengah, 1.0 = mentok bawah)
+
+-------------------------------------------------------------------
+ JARAK DAN UKURAN KHUSUS (MARGIN & MATCH CONSTRAINT)
+1. Jarak luar (Hanya aktif jika sisi tersebut sudah diberi ikatan/constraint):
+   android:layout_marginStart="16dp"  (Jarak dari batas kiri)
+   android:layout_marginEnd="16dp"    (Jarak dari batas kanan)
+   android:layout_marginTop="16dp"    (Jarak dari batas atas)
+   android:layout_marginBottom="16dp" (Jarak dari batas bawah)
+
+2. Mengisi Ruang Sesuai Ikatan (Match Constraint):
+   android:layout_width="0dp"  (Lebar otomatis melebar mengikuti ikatan)
+   android:layout_height="0dp" (Tinggi otomatis meninggi mengikuti ikatan)
+
+===================================================================
+
+
+
+
+1. Menggunakan XML Layout (Android Views)
+
+
+
+A. Menyejajarkan Horizontal (Kiri/Kanan):
+
+1. app:layout_constraintStart_toStartOf="parent"
+
+2. app:layout_constraintEnd_toEndOf="parent"
+
+3. app:layout_constraintStart_toEndOf="@id/id_komponen"
+
+
+
+B. Menyejajarkan Vertikal (Atas/Bawah):
+
+1. app:layout_constraintTop_toTopOf="parent"
+
+2. app:layout_constraintBottom_toBottomOf="parent"
+
+3. app:layout_constraintTop_toBottomOf="@id/id_komponen
+
+
+
+
+C. Membuat ke Tengah (Center):
+
+1. Gabungkan constraintStart dan constraintEnd ke parent untuk tengah horizontal.
+
+2. Gabungkan layout_constraintHorizontal_bias="0.5" untuk mengatur pergeseran tengah.
+
+
+
+
+D. Jika menggunakan LinearLayout
+
+1. android:orientation="vertical"
+
+2. android:orientation="horizontal"
+
+
+
+E. Mengatur posisi di dalam layout:
+
+1. android:gravity="center"
+
+2. android:layout_gravity="center"
+
+F. Membagi Ruang Sama Rata:
+
+1. android:layout_weight="1"
+
+G. Kata Kunci Jarak (Berlaku untuk semua XML)
+
+1. android:layout_margin="16dp"
+
+2. android:padding="16dp"
+

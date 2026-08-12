@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/biru"
+        android:text="@string/toast"
+        android:onClick="showToast"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="#E43BBA09"
+        android:text="@string/angka"
+        android:textColor="@color/biruTuaBanget"
+        android:textStyle="bold"
+        android:textSize="170sp" />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:onClick="countUp"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/hijau"
+        android:backgroundTintMode="add"
+        android:text="@string/hitung"
+        android:textSize="20sp" />
+
+</LinearLayout>
