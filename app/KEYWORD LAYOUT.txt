@@ -137,6 +137,79 @@ dan 1 sumbu Vertikal (Atas/Bawah) agar tidak melayang ke pojok kiri atas.
 
 ===================================================================
 
+contoh guru  tapi fix
+
+public class MainActivity extends AppCompatActivity {
+
+    // --- 1. TAMBAHKAN DUA BARIS INI (Persiapan) ---
+    private int count = 0;
+    private android.widget.TextView textView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // --- 2. TAMBAHKAN BARIS INI (Menghubungkan ke HP) ---
+        textView = findViewById(R.id.text);
+
+        // ... kode lainnya ...
+    }
+
+    // --- 3. KODE GURUMU DI SINI ---
+    public void countUp(View view) {
+        count++; // Menambah angka
+        textView.setText(count + ""); // Menampilkan ke layar
+    }
+}
+
+
+
+
+fix ai pertama
+
+    // Fungsi ini dipanggil saat tombol HITUNG diklik
+    public void countUp(View view) {
+        // 1. Cari TextView yang ada di layar berdasarkan ID-nya ("text")
+        android.widget.TextView layarAngka = findViewById(R.id.text);
+
+        // 2. Ambil teks yang sekarang ada di layar (misal: "0")
+        String teksSekarang = layarAngka.getText().toString();
+
+        // 3. Ubah teks tersebut menjadi angka supaya bisa dijumlahkan
+        int angka = Integer.parseInt(teksSekarang);
+
+        // 4. Tambah angkanya dengan 1
+        angka = angka + 1;
+
+        // 5. Tampilkan kembali angka yang baru ke layar
+        // Tips: "" + angka adalah cara cepat mengubah angka jadi teks
+        layarAngka.setText("" + angka);
+    }
+
+
+
+fix ai kedua
+
+
+public void countUp(View view) {
+    // 1. Ambil TextView-nya
+    android.widget.TextView layar = findViewById(R.id.text);
+
+    // 2. Ambil angka lama dari layar
+    String teksLama = layar.getText().toString();
+    int angkaLama = Integer.parseInt(teksLama);
+
+    // 3. Tambah 1 dan tampilkan lagi
+    int angkaBaru = angkaLama + 1;
+    layar.setText("" + angkaBaru);
+}
+
+
+
+
+
+
 
 
 
