@@ -3,4 +3,5 @@
     <string name = "toast">TOAST</string>
     <string name = "hitung">HITUNG</string>
     <string name = "angka">0</string>
+    <string name = "reset">Reset</string>
 </resources>
